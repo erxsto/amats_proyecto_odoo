@@ -42,12 +42,59 @@
             </field>
         </record>
 
+      <!-- Asesor rules Mes-->
+      <record id="view_module_test_rules_mes_asesor_form" model="ir.ui.view">
+            <field name="name">view.module.test.rules.mes.asesor.form</field>
+            <field name="model">module_test.rules_mes_asesor</field>
+            <field name="arch" type="xml">
+                 <form string="Formulario Asesor">
+                     <sheet>
+                       <group>
+                           <field name="fecha_inicio"/>
+                           <field name="fecha_fin"/>
+                           <field name="currency_id"/>
+                           <field name="nombre_mes"/>
+                           <field name="meta"/>
+                       </group>
+                     </sheet>
+                 </form>
+            </field>
+        </record>
+
+      <record id="view_module_test_rules_mes_asesor_tree" model="ir.ui.view">
+            <field name="name">view.module.test.rules.mes.asesor.tree</field>
+            <field name="model">module_test.rules_mes_asesor</field>
+            <field name="arch" type="xml">
+                <tree string="Asesores">
+                           <field name="nombre_mes"/>
+                           <field name="meta"/>
+
+                </tree>
+            </field>
+        </record>
+
+      <record id="action_module_test_rules_mes_asesor_view" model="ir.actions.act_window">
+            <field name="name">action.module.test.rules.mes.asesor.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">module_test.rules_mes_asesor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Asesor mes rules</p>
+            <p> Click 'Nuevo' para añadir nuevos elementos </p>
+            </field>
+        </record>
+
+
     <!-- Top menu item -->
 
-        <menuitem id="menu_asesor_ventas_root" name="ASESOR DE VENTAS" sequence="2"/>
-        <menuitem id="menu_asesor_home" name="Asesor" parent="menu_asesor_ventas_root" sequence="0"/>
-       <!-- <menuitem id="menu_asesor_configuration" name="Configuracion" parent="menu_asesor_ventas_root" sequence="5"/>-->
 
-        <menuitem id="menu_asesor" name="Reglas Mes" parent="menu_asesor_home" sequence="0" action="action_module_test_asesor_view"/>
+        <menuitem id="menu_asesor_ventas_root" name="ASESOR DE VENTAS" sequence="2"/>
+
+        <menuitem id="menu_asesor_home" name="Asesor" parent="menu_asesor_ventas_root" sequence="0"/>
+        <menuitem id="menu_asesor" name="Asesor" parent="menu_asesor_home" sequence="0" action="action_module_test_asesor_view"/>
+
+       <menuitem id="menu_asesor_configuration" name="Configuracion" parent="menu_asesor_ventas_root" sequence="5"/>
+        <menuitem id="menu_reglas_mes_asesor" name="Reglas Mes" parent="menu_asesor_configuration" sequence="0" action="action_module_test_rules_mes_asesor_view"/>
+
   </data>
 </odoo>
