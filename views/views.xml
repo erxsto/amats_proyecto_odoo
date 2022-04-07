@@ -1,0 +1,53 @@
+<odoo>
+  <data>
+
+<!-- Asesor -->
+        <record id="view_module_test_asesor_form" model="ir.ui.view">
+            <field name="name">view.module.test.asesor.form</field>
+            <field name="model">module_test.asesor</field>
+            <field name="arch" type="xml">
+                 <form string="Formulario Asesor">
+                     <sheet>
+                       <group>
+                           <field name="asesor"/>
+                           <field name="currency_id"/>
+                           <field name="puesto"/>
+                       </group>
+                     </sheet>
+                 </form>
+            </field>
+        </record>
+
+      <record id="view_module_test_asesor_tree" model="ir.ui.view">
+            <field name="name">view.module.test.asesor.tree</field>
+            <field name="model">module_test.asesor</field>
+            <field name="arch" type="xml">
+                <tree string="Asesores">
+                            <field name="asesor"/>
+                           <field name="currency_id"/>
+                           <field name="puesto"/>
+
+                </tree>
+            </field>
+        </record>
+
+      <record id="action_module_test_asesor_view" model="ir.actions.act_window">
+            <field name="name">action.module.test.asesor.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">module_test.asesor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Asesor</p>
+            <p> Click 'Nuevo' para añadir nuevos elementos </p>
+            </field>
+        </record>
+
+    <!-- Top menu item -->
+
+        <menuitem id="menu_asesor_ventas_root" name="ASESOR DE VENTAS" sequence="2"/>
+        <menuitem id="menu_asesor_home" name="Asesor" parent="menu_asesor_ventas_root" sequence="0"/>
+       <!-- <menuitem id="menu_asesor_configuration" name="Configuracion" parent="menu_asesor_ventas_root" sequence="5"/>-->
+
+        <menuitem id="menu_asesor" name="Reglas Mes" parent="menu_asesor_home" sequence="0" action="action_module_test_asesor_view"/>
+  </data>
+</odoo>

@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <record id="asesor0" model="module_test.asesor">
+            <field name="asesor">1</field>
+            <field name="currency_id">MXN</field>
+            <field name="done">MXN</field>
+        </record>
+    </data>
+</odoo>
