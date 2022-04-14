@@ -48,7 +48,7 @@
                  <form string="Formulario inventario">
                      <sheet>
                        <group>
-                           <field name="nombre"/>
+                           <field name="name"/>
                             <field name="descripcion"/>
                             <field name="version"/>
 
@@ -63,7 +63,7 @@
             <field name="model">module_test.app</field>
             <field name="arch" type="xml">
                 <tree string="Inventarios">
-                            <field name="nombre"/>
+                            <field name="name"/>
                             <field name="version"/>
 
                 </tree>
