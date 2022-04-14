@@ -6,7 +6,7 @@ class Dispositivo(models.Model):
     _description = 'dispositivos electronicos'
 
     tipo = fields.Selection([('c', 'computadora'), ('t', 'telefono')], default='c')
-    marca = fields.Many2one(comodel_name='module_test.app', string = 'marca')
+    marca = fields.Many2one('module_test.app', string = 'marca')
     
 
 class Aplicacion(models.Model):
