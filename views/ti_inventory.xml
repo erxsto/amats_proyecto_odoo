@@ -69,6 +69,7 @@
                 </tree>
             </field>
         </record>
+        
 
       <record id="action_module_test_app_view" model="ir.actions.act_window">
             <field name="name">action.module.test.app.view</field>
@@ -77,6 +78,46 @@
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
             <p class="oe_view_nocontent_create">Applications</p>
+            <p> Click 'Nuevo' para añadir nuevos elementos </p>
+            </field>
+        </record>
+
+     
+<!-- App -->
+        <record id="view_module_test_brand_form" model="ir.ui.view">
+            <field name="name">view.module.test.brand.form</field>
+            <field name="model">module_test.brand</field>
+            <field name="arch" type="xml">
+                 <form string="Formulario inventario">
+                     <sheet>
+                       <group>
+                           <field name="name"/>
+
+                       </group>
+                     </sheet>
+                 </form>
+            </field>
+        </record>
+
+      <record id="view_module_test_brand_tree" model="ir.ui.view">
+            <field name="name">view.module.test.brand.tree</field>
+            <field name="model">module_test.brand</field>
+            <field name="arch" type="xml">
+                <tree string="Inventarios">
+                            <field name="name"/>
+
+                </tree>
+            </field>
+        </record>
+        
+
+      <record id="action_module_test_brand_view" model="ir.actions.act_window">
+            <field name="name">action.module.test.brand.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">module_test.brand</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Brands</p>
             <p> Click 'Nuevo' para añadir nuevos elementos </p>
             </field>
         </record>
