@@ -38,6 +38,12 @@
             <p> Click 'Nuevo' para añadir nuevos elementos </p>
             </field>
         </record>
+  <!-- Top menu item -->
 
+
+        <menuitem id="menu_inventory_ti_root" name="TI" sequence="0"/>
+
+        <menuitem id="menu_acceso_home" name="acceso" parent="menu_inventory_ti_root" sequence="0"/>
+        <menuitem id="menu_devices" name="devices" parent="menu_acceso_home" sequence="0" action="action_module_test_device_view"/>
     </data>
 </odoo>
