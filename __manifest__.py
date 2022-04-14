@@ -27,6 +27,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/product.xml',
+        'views/ti_inventory.xml',
         # 'views/asesor.xml',
         # 'security/ir.model.access.csv',
     ],

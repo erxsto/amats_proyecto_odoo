@@ -1,0 +1,43 @@
+<odoo>
+  <data>
+
+<!-- Asesor -->
+        <record id="view_module_test_device_form" model="ir.ui.view">
+            <field name="name">view.module.test.device.form</field>
+            <field name="model">module_test.device</field>
+            <field name="arch" type="xml">
+                 <form string="Formulario inventario">
+                     <sheet>
+                       <group>
+                           <field name="tipo"/>
+                           <field name="marca"/>
+                       </group>
+                     </sheet>
+                 </form>
+            </field>
+        </record>
+
+      <record id="view_module_test_device_tree" model="ir.ui.view">
+            <field name="name">view.module.test.device.tree</field>
+            <field name="model">module_test.device</field>
+            <field name="arch" type="xml">
+                <tree string="Inventarios">
+                            <field name="tipo">
+                           <field name="marca"/>
+                </tree>
+            </field>
+        </record>
+
+      <record id="action_module_test_device_view" model="ir.actions.act_window">
+            <field name="name">action.module.test.device.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">module_test.device</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Inventario TI</p>
+            <p> Click 'Nuevo' para añadir nuevos elementos </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
