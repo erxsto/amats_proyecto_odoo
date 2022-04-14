@@ -27,7 +27,7 @@
         'views/views.xml',
         'views/templates.xml',
         'views/product.xml',
-        'views/asesor.xml',
+        # 'views/asesor.xml',
         # 'security/ir.model.access.csv',
     ],
     # only loaded in demonstration mode
