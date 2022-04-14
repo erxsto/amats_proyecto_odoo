@@ -22,7 +22,7 @@
             <field name="model">module_test.device</field>
             <field name="arch" type="xml">
                 <tree string="Inventarios">
-                            <field name="tipo">
+                            <field name="tipo"/>
                            <field name="marca"/>
                 </tree>
             </field>
