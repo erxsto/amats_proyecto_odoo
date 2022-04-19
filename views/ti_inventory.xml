@@ -15,13 +15,14 @@
                        </group>
                         <notebook>
                             <page string="Aplicaciones"> 
-                                <field name="app" widget="One2many_list"/>
+                                <field name="app" widget="One2many_list">
                                 <tree>
                                     <field name="sequence" widget="handle"/>
                                     <field name="name"/>
                                     <field name="descripcion"/>
                                     <field name="version"/>
                                 </tree>
+                                </field>
                             </page>
                             <page string="Notas"> 
                                 
