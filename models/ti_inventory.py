@@ -7,7 +7,7 @@ class Dispositivo(models.Model):
 
     tipo = fields.Selection([('c', 'computadora'), ('t', 'telefono')], default='c')
     marca = fields.Many2one('module_test.brand', string = 'marca')
-    app = fields.One2many('module_test.app','id_app',string = 'aplicacion')
+    app = fields.Many2many('module_test.app',string = 'aplicacion')
 
 class Aplicacion(models.Model):
     _name = 'module_test.app'
