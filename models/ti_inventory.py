@@ -5,6 +5,7 @@ class Dispositivo(models.Model):
     _name = 'module_test.device'
     _description = 'dispositivos electronicos'
 
+    empleado = fields.Many2one('hr.employee', 'Asesor', attribute='id')
     tipo = fields.Selection([('c', 'computadora'), ('t', 'telefono')], default='c')
     marca = fields.Many2one('module_test.brand', string = 'marca')
     app = fields.Many2many('module_test.app',string = 'aplicacion')

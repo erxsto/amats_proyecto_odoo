@@ -12,6 +12,7 @@
                        <group>
                            <field name="tipo"/>
                            <field name="marca"/>
+                           <field name="empleado"/>
                        </group>
                         <notebook>
                             <page string="Aplicaciones"> 
